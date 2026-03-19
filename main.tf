@@ -1,0 +1,10 @@
+terraform {
+  required_providers {
+    aws = { source = "hashicorp/aws", version = "~> 5.0" }
+  }
+}
+
+resource "aws_ecr_repository" "this" {
+  name = var.name
+  tags = var.tags
+}
